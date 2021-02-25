@@ -10,7 +10,7 @@ import priv.liheyu.chat.ui.StageController;
 /**
  * @author xunmi
  * @Title: Main
- * @ProjectName java
+ * @ProjectName javaClient
  * @Description: TODO
  * @date 2019/5/25 9:39
  */
