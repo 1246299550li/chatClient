@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="330.0" prefWidth="430.0" stylesheets="@../css/register.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="priv.liheyu.chat.ui.controller.RegisterViewController">
+    <rotationAxis>
+        <Point3D />
+    </rotationAxis>
+
+    <Text layoutX="50.0" layoutY="75.0" text="欢迎注册帐号">
+        <font>
+            <Font size="24.0" />
+        </font>
+    </Text>
+    <Text layoutX="50.0" layoutY="105.0" text="每一天，乐在沟通。">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </Text>
+    <TextField fx:id="userName" layoutX="100.0" layoutY="128.0" prefHeight="25.0" prefWidth="240.0" promptText="帐号(只能为纯数字)" />
+    <PasswordField fx:id="password" layoutX="100.0" layoutY="173.0" onKeyPressed="#register_" prefHeight="25.0" prefWidth="240.0" promptText="密码" />
+    <Label />
+    <Label />
+    <ProgressBar layoutX="132.0" layoutY="289.0" prefHeight="32.0" prefWidth="200.0" visible="false" />
+    <Label fx:id="errorTips" layoutX="145.0" layoutY="212.0" prefHeight="20.0" prefWidth="194.0" text="密码" visible="false" wrapText="true">
+        <Font size="14.0" />
+    </Label>
+
+    <Button fx:id="register" layoutX="100.0" layoutY="232.0" mnemonicParsing="false" onMouseClicked="#register" onMouseEntered="#register_enter" onMouseExited="#register_exit" prefHeight="32.0" prefWidth="240.0" style="-fx-background-color: #09A3DC" text="立 即 注 册" textFill="WHITE">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </Button>
+
+    <Hyperlink layoutX="350.0" layoutY="127.0" onMouseClicked="#gotoLogin" text="返回登录">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Hyperlink>
+
+    <CheckBox disable="true" layoutX="100.0" layoutY="279.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="256.0" selected="true" text="我已阅读并同意相关服务条款和隐私政策">
+        <Font size="12.0" />
+    </CheckBox>
+
+    <ImageView fx:id="closeBtn" fitHeight="30.0" fitWidth="30.0" layoutX="399.0" onMouseClicked="#close" onMouseEntered="#closeEntered" onMouseExited="#closeExited" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <rotationAxis>
+            <Point3D />
+        </rotationAxis>
+        <Image url="@../../login/img/close.png" />
+    </ImageView>
+    <ImageView fx:id="minBtn" fitHeight="30.0" fitWidth="30.0" layoutX="346.0" onMouseClicked="#min" onMouseEntered="#minEntered" onMouseExited="#minExited" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="0.0">
+        <Image url="@../../login/img/min.png" />
+    </ImageView>
+
+</AnchorPane>

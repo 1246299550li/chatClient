@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="priv.liheyu.chat.ui.controller.MainViewController">
+    <BorderPane prefHeight="400.0" prefWidth="600.0">
+        <center>
+            <HBox fx:id="chatUI" prefHeight="350.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+                <ScrollPane prefHeight="350.0" prefWidth="150.0">
+                    <VBox fx:id="list" prefHeight="360.0" prefWidth="131.0" style="-fx-background-color: #49a0e5;" />
+                </ScrollPane>
+            </HBox>
+        </center>
+        <top>
+            <AnchorPane fx:id="pane" prefHeight="50.0" prefWidth="600.0" style="-fx-background-color: #3448a1;">
+                <ImageView fx:id="minBtn" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#min" onMouseEntered="#minEntered" onMouseExited="#minExited" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="0.0">
+                    <Image url="@../img/min.png" />
+                </ImageView>
+                <ImageView fx:id="closeBtn" fitHeight="30.0" fitWidth="30.0" onMouseClicked="#close" onMouseEntered="#closeEntered" onMouseExited="#closeExited" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <Image url="@../img/close.png" />
+                </ImageView>
+            <Label fx:id="user" layoutX="14.0" layoutY="10.0" prefHeight="30.0" prefWidth="86.0" text=" " textFill="#e18484">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+
+            </AnchorPane>
+        </top>
+    </BorderPane>
+</StackPane>
